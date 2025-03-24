@@ -1,0 +1,24 @@
+Patch Update Information for 10.1.0.11
+========================================
+
+Command: sudo yum clean all
+41 files removed
+
+Command: sudo yum makecache
+CentOS-8 - AppStream (OpenLogic)                 14 MB/s | 8.4 MB     00:00    
+CentOS-8 - Base (OpenLogic)                     7.6 MB/s | 4.6 MB     00:00    
+CentOS-8 - Extras (OpenLogic)                    86 kB/s |  10 kB     00:00    
+CentOS Linux 8 - AppStream                       12 MB/s | 8.4 MB     00:00    
+CentOS Linux 8 - BaseOS                          14 MB/s | 4.6 MB     00:00    
+CentOS Linux 8 - Extras                          80 kB/s |  10 kB     00:00    
+CentOS-8 - OpenLogic packages for x86_64        353 kB/s |  16 kB     00:00    
+Metadata cache created.
+
+Command: sudo yum check-update || true
+Last metadata expiration check: 0:00:02 ago on Mon 24 Mar 2025 08:26:09 AM UTC.
+
+Command: sudo yum update -y
+Last metadata expiration check: 0:00:03 ago on Mon 24 Mar 2025 08:26:09 AM UTC.
+Dependencies resolved.
+Nothing to do.
+Complete!

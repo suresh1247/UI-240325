@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { margin: 20px auto; width: 50%; }
+        button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h2>Upload Server Inventory</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if uploaded %}
+    <h3>Inventory File Uploaded Successfully!</h3>
+    <h3>Actions</h3>
+    <button onclick="location.href='/process/reboot'">Reboot Servers</button>
+    <button onclick="location.href='/process/shutdown'">Shutdown Servers</button>
+    <form action="/patch" method="post">
+        <button type="submit">Patch Servers</button>
+    </form>
+    {% else %}
+    <h3>File Not Uploaded Yet</h3>
+    {% endif %}
+</body>
+</html>

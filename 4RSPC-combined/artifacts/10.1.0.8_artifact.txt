@@ -1,0 +1,73 @@
+System Information for 10.1.0.8
+========================================
+
+Command: cat /etc/os-release
+NAME="CentOS Linux"
+VERSION="8"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Linux 8"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+CENTOS_MANTISBT_PROJECT="CentOS-8"
+CENTOS_MANTISBT_PROJECT_VERSION="8"
+
+Command: date
+Sat Mar 22 11:44:06 UTC 2025
+
+Command: ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 7c:1e:52:16:b5:de brd ff:ff:ff:ff:ff:ff
+    inet 10.1.0.8/24 brd 10.1.0.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7e1e:52ff:fe16:b5de/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enP23540s1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master eth0 state UP group default qlen 1000
+    link/ether 7c:1e:52:16:b5:de brd ff:ff:ff:ff:ff:ff
+
+Command: free -h
+              total        used        free      shared  buff/cache   available
+Mem:          3.8Gi       222Mi       3.2Gi       8.0Mi       385Mi       3.4Gi
+Swap:            0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        2.0G     0  2.0G   0% /dev
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           2.0G  8.6M  2.0G   1% /run
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+/dev/sda2        30G  2.2G   27G   8% /
+/dev/sda1       496M  110M  386M  23% /boot
+/dev/sda15      495M  7.3M  488M   2% /boot/efi
+tmpfs           393M     0  393M   0% /run/user/1000
+
+Command: uptime
+ 11:44:06 up 57 min,  0 users,  load average: 0.02, 0.02, 0.00
+
+Command: netstat -planetu
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name    
+tcp        0      0 0.0.0.0:5355            0.0.0.0:*               LISTEN      193        24055      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      0          29197      -                   
+tcp        0    304 10.1.0.8:22             10.1.0.4:52114          ESTABLISHED 0          48027      -                   
+tcp6       0      0 :::5355                 :::*                    LISTEN      193        24058      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      0          29199      -                   
+udp        0      0 0.0.0.0:5355            0.0.0.0:*                           193        24054      -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           193        24061      -                   
+udp        0      0 10.1.0.8:68             168.63.129.16:67        ESTABLISHED 0          26438      -                   
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           0          25300      -                   
+udp6       0      0 :::5355                 :::*                                193        24057      -                   
+udp6       0      0 ::1:323                 :::*                                0          25301      -                   
+
+Command: uname -r
+4.18.0-348.7.1.el8_5.x86_64

@@ -1,0 +1,58 @@
+System Information for 10.1.0.7
+========================================
+
+Command: cat /etc/os-release
+NAME="SLES"
+VERSION="15-SP5"
+VERSION_ID="15.5"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP5"
+ID="sles"
+ID_LIKE="suse"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:15:sp5"
+DOCUMENTATION_URL="https://documentation.suse.com/"
+VARIANT_ID="sles-basic"
+
+Command: date
+Fri Mar 21 06:13:52 UTC 2025
+
+Command: ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 7c:1e:52:59:02:1d brd ff:ff:ff:ff:ff:ff
+    inet 10.1.0.7/24 brd 10.1.0.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7e1e:52ff:fe59:21d/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master eth0 state UP group default qlen 1000
+    link/ether 7c:1e:52:59:02:1d brd ff:ff:ff:ff:ff:ff
+    altname enP26002p0s2
+    altname enP26002s1
+
+Command: free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       376Mi       3.5Gi        19Mi       134Mi       3.5Gi
+Swap:             0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           2.0G  4.0K  2.0G   1% /dev/shm
+tmpfs           783M   17M  766M   3% /run
+/dev/sda4        29G  3.7G   25G  13% /
+/dev/sda3      1014M  114M  901M  12% /boot
+/dev/sda2       512M  3.0M  509M   1% /boot/efi
+tmpfs           392M     0  392M   0% /run/user/1000
+
+Command: uptime
+ 06:13:52  up   0:03,  0 users,  load average: 0.02, 0.05, 0.01
+
+Command: netstat -planetu
+
+Command: uname -r
+5.14.21-150500.33.75-azure

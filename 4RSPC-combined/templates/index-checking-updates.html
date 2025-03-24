@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patch Management System - Multi-Client Patches</title>
+</head>
+<body>
+    <h2>Patch Management System - Multi-Client Patches</h2>
+
+    <h3>Upload Inventory File (CSV)</h3>
+    <form id="uploadForm">
+        <input type="file" id="inventoryFile" name="inventory">
+        <button type="button" onclick="uploadInventory()">Upload</button>
+    </form>
+
+    <h3>Run Patch Check</h3>
+    <button onclick="runPatchCheck()">Run Patch Check</button>
+
+    <p id="status"></p>
+    <div id="downloadLinks"></div>
+    <div id="errorsSection" style="color: red; font-weight: bold;"></div>
+
+    <script>
+        function uploadInventory() {
+            const formData = new FormData();
+            const fileInput = document.getElementById("inventoryFile");
+            formData.append("inventory", fileInput.files[0]);
+
+            fetch('/upload_inventory', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert("Error: " + data.error);
+                } else {
+                    alert(data.message);
+                }
+            });
+        }
+
+        function runPatchCheck() {
+            document.getElementById("status").innerText = "Running patch check, please wait...";
+            document.getElementById("downloadLinks").innerHTML = "";
+            document.getElementById("errorsSection").innerHTML = "";
+
+            fetch('/run_patch_check', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById("status").innerText = "Error: " + data.error;
+                } else {
+                    document.getElementById("status").innerText = data.message;
+                    const downloadDiv = document.getElementById("downloadLinks");
+                    data.files.forEach(file => {
+                        const link = document.createElement("a");
+                        link.href = "/download/" + file;
+                        link.innerText = "Download " + file;
+                        link.style.display = "block";
+                        downloadDiv.appendChild(link);
+                    });
+
+                    if (data.errors.length > 0) {
+                        const errorsDiv = document.getElementById("errorsSection");
+                        errorsDiv.innerHTML = "<p>Unreachable Servers:</p><ul>";
+                        data.errors.forEach(error => {
+                            const li = document.createElement("li");
+                            li.innerText = error;
+                            errorsDiv.appendChild(li);
+                        });
+                        errorsDiv.innerHTML += "</ul>";
+                    }
+                }
+            })
+            .catch(error => {
+                document.getElementById("status").innerText = "Error running patch check.";
+            });
+        }
+    </script>
+</body>
+</html>

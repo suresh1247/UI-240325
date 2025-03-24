@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Execution Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        .red { color: red; font-weight: bold; }
+        .green { color: green; font-weight: bold; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h2>Server {{ action.capitalize() }} Results</h2>
+    {% if in_progress %}
+    <h3>Process in Progress...</h3>
+    {% else %}
+    <table>
+        <tr>
+            <th>Server IP</th>
+            <th>Status</th>
+            <th>Artifact</th>
+            {% if action == "reboot" %}
+            <th>Uptime</th>
+            <th>Services</th>
+            {% endif %}
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result[0] }}</td> <!-- IP -->
+            <td class="{{ result[2] }}">{{ result[1] }}</td> <!-- Status -->
+            <td>
+                {% if result[3] %}
+                <a href="/download/{{ result[3] }}">Download</a> <!-- Artifact -->
+                {% else %}
+                N/A
+                {% endif %}
+            </td>
+            {% if action == "reboot" %}
+            <td>{{ result[4] if result[4] else "N/A" }}</td> <!-- Uptime -->
+            <td>
+                {% if result[5] is none %}
+                <span>---</span>
+                {% elif result[5]|length == 0 %}
+                <span class="green">All services running fine</span>
+                {% else %}
+                <span class="red">Failed services:</span>
+                <ul>
+                    {% for service in result[5] %}
+                    <li>{{ service }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
