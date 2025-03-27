@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f5f5f5; }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        .back-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #4CAF50; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>{{ action.upper() }} Results</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Server IP</th>
+                <th>Status</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result[0] }}</td>
+                <td class="{% if '❌' in result[1] %}error{% else %}success{% endif %}">{{ result[1] }}</td>
+                <td>
+                    {% if result[3] %}
+                    <a href="/download/{{ result[3] }}">Download Log</a>
+                    {% else %}
+                    No details available
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="/" class="back-btn">Back to Dashboard</a>
+</body>
+</html>

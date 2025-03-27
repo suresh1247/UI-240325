@@ -1,0 +1,53 @@
+Patch Update for 10.1.0.8
+========================================
+
+Command: sudo zypper refresh
+Repository 'SLE-Module-Basesystem15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Basesystem15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Containers15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Containers15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Pool' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Public-Cloud15-SP5-Pool' is up to date.
+Retrieving repository 'SLE-Module-Public-Cloud15-SP5-Updates' metadata [.............done]
+Building repository 'SLE-Module-Public-Cloud15-SP5-Updates' cache [....done]
+Repository 'SLE-Module-Python3-15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Python3-15-SP5-Updates' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Pool' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Updates' is up to date.
+All repositories have been refreshed.
+
+Command: sudo zypper list-updates
+Refreshing service 'Basesystem_Module_x86_64'.
+Refreshing service 'Containers_Module_x86_64'.
+Refreshing service 'Desktop_Applications_Module_x86_64'.
+Refreshing service 'Development_Tools_Module_x86_64'.
+Refreshing service 'Public_Cloud_Module_x86_64'.
+Refreshing service 'Python_3_Module_x86_64'.
+Refreshing service 'SUSE_Linux_Enterprise_Server_x86_64'.
+Refreshing service 'Server_Applications_Module_x86_64'.
+Refreshing service 'Web_and_Scripting_Module_x86_64'.
+Loading repository data...
+Reading installed packages...
+S  | Repository                            | Name                                 | Current Version       | Available Version      | Arch
+---+---------------------------------------+--------------------------------------+-----------------------+------------------------+-------
+v  | SLE-Module-Public-Cloud15-SP5-Updates | azure-cli                            | 2.58.0-150400.14.9.1  | 2.58.0-150400.14.12.1  | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | azure-cli-core                       | 2.58.0-150400.14.3.2  | 2.58.0-150400.14.6.1   | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | cloud-init                           | 23.3-150100.8.82.3    | 23.3-150100.8.85.4     | x86_64
+v  | SLE-Module-Public-Cloud15-SP5-Updates | cloud-init-config-suse               | 23.3-150100.8.82.3    | 23.3-150100.8.85.4     | x86_64
+v  | SLE-Module-Public-Cloud15-SP5-Updates | cloud-regionsrv-client               | 10.3.7-150300.13.14.1 | 10.3.11-150300.13.19.1 | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | cloud-regionsrv-client-addon-azure   | 1.0.5-150300.13.14.1  | 1.0.5-150300.13.19.1   | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | cloud-regionsrv-client-plugin-azure  | 2.0.0-150300.13.14.1  | 2.0.0-150300.13.19.1   | noarch
+v  | SLE-Module-Containers15-SP5-Updates   | containerd                           | 1.7.21-150000.117.1   | 1.7.23-150000.120.1    | x86_64
+v  | SLE-Module-Public-Cloud15-SP5-Updates | microsoft-dracut-config              | 0.0.1-150300.7.5.1    | 0.0.4-150300.7.9.2     | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | python-azure-agent                   | 2.9.1.1-150100.3.44.2 | 2.9.1.1-150400.3.41.1  | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | python-azure-agent-config-server     | 2.9.1.1-150100.3.44.2 | 2.9.1.1-150400.3.41.1  | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | python-instance-billing-flavor-check | 0.0.6-150400.1.11.7   | 1.0.0-150000.1.20.1    | x86_64
+v  | SLE-Module-Python3-15-SP5-Updates     | python311-six                        | 1.16.0-150400.18.6.1  | 1.16.0-150400.18.9.1   | noarch
+v  | SLE-Module-Public-Cloud15-SP5-Updates | regionServiceClientConfigAzure       | 2.2.0-150000.3.22.1   | 2.2.2-150000.3.25.1    | noarch

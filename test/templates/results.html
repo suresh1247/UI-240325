@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operation Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { text-align: center; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f5f5f5; }
+        .success { color: #28a745; font-weight: bold; }
+        .failure { color: #dc3545; font-weight: bold; }
+        .info { color: #17a2b8; font-weight: bold; }
+        .back-btn { display: inline-block; padding: 10px 20px; background: #4CAF50; color: white; text-decoration: none; border-radius: 4px; margin-top: 20px; }
+        .service-list { margin: 0; padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ action.upper() }} RESULTS</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Server IP</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                    {% if action == "reboot" %}
+                    <th>Uptime</th>
+                    <th>Services</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td class="{% if '❌' in result[1] %}failure{% elif '✅' in result[1] %}success{% else %}info{% endif %}">
+                        {{ result[1] }}
+                    </td>
+                    <td>
+                        {% if result[3] %}
+                        <a href="/download/{{ result[3] }}">Download Log</a>
+                        {% else %}
+                        No details available
+                        {% endif %}
+                    </td>
+                    {% if action == "reboot" %}
+                    <td>{{ result[4] if result[4] else "N/A" }}</td>
+                    <td>
+                        {% if result[5] is none %}
+                        <span>---</span>
+                        {% elif result[5]|length == 0 %}
+                        <span class="success">All services running</span>
+                        {% else %}
+                        <span class="failure">Failed services:</span>
+                        <ul class="service-list">
+                            {% for service in result[5] %}
+                            <li>{{ service }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div style="text-align: center;">
+            <a href="/" class="back-btn">Return to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

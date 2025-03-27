@@ -1,0 +1,22 @@
+Patch Update for 10.1.0.11
+========================================
+
+Command: sudo yum clean all
+61 files removed
+
+Command: sudo yum makecache
+CentOS-8 - AppStream (OpenLogic)                 11 MB/s | 8.4 MB     00:00    
+CentOS-8 - Base (OpenLogic)                     5.2 MB/s | 4.6 MB     00:00    
+CentOS-8 - Extras (OpenLogic)                    32 kB/s |  10 kB     00:00    
+CentOS Linux 8 - AppStream                       21 MB/s | 8.4 MB     00:00    
+CentOS Linux 8 - BaseOS                          15 MB/s | 4.6 MB     00:00    
+CentOS Linux 8 - Extras                         101 kB/s |  10 kB     00:00    
+CentOS-8 - OpenLogic packages for x86_64        202 kB/s |  16 kB     00:00    
+Extra Packages for Enterprise Linux 8 - x86_64  4.8 MB/s |  14 MB     00:02    
+Extra Packages for Enterprise Linux Modular 8 - 980 kB/s | 733 kB     00:00    
+Metadata cache created.
+
+Command: sudo yum check-update || true
+Last metadata expiration check: 0:00:08 ago on Thu 27 Mar 2025 12:22:20 AM UTC.
+
+epel-release.noarch                        8-21.el8                         epel
