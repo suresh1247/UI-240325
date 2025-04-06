@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Management</title>
+    <style>
+        table { border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 8px; border: 1px solid #ddd; }
+        .action-buttons { margin: 20px 0; }
+        button { margin-right: 10px; padding: 5px 15px; }
+    </style>
+</head>
+<body>
+    <h1>Server Management</h1>
+    
+    <h2>Add New Server</h2>
+    <form method="post" action="{{ url_for('add_server') }}">
+        <input type="text" name="ip" placeholder="IP Address" required>
+        <input type="text" name="hostname" placeholder="Hostname (optional)">
+        <button type="submit">Add Server</button>
+    </form>
+
+    <h2>Server List</h2>
+    <form method="post" action="{{ url_for('handle_action') }}">
+        <table>
+            <tr>
+                <th><input type="checkbox" id="selectAll"></th>
+                <th>IP Address</th>
+                <th>Hostname</th>
+                <th>Actions</th>
+            </tr>
+            {% for server in servers %}
+            <tr>
+                <td><input type="checkbox" name="server_ips" value="{{ server.ip }}"></td>
+                <td>{{ server.ip }}</td>
+                <td>{{ server.hostname }}</td>
+                <td>
+                    <a href="{{ url_for('delete_server', server_id=server.id) }}" 
+                       onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        <div class="action-buttons">
+            <button type="submit" name="action" value="reboot">Reboot Selected</button>
+            <button type="submit" name="action" value="shutdown">Shutdown Selected</button>
+            <button type="submit" name="action" value="check_patches">Check Patches</button>
+            <button type="submit" name="action" value="apply_patches">Apply Patches</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('selectAll').addEventListener('click', function(e) {
+            var checkboxes = document.querySelectorAll('input[name="server_ips"]');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = e.target.checked;
+            });
+        });
+    </script>
+</body>
+</html>

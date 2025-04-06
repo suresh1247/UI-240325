@@ -1,0 +1,54 @@
+Patch Update Information for 10.1.0.4
+========================================
+
+Command: export DEBIAN_FRONTEND=noninteractive
+
+Command: sudo apt update -y
+Hit:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2417 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [400 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [18.5 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [3164 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [558 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [676 B]
+Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1195 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [294 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [28.7 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [46.5 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [11.8 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [592 B]
+Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [68.4 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.1 kB]
+Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [392 B]
+Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [31.2 kB]
+Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2150 kB]
+Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [334 kB]
+Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.6 kB]
+Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2997 kB]
+Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [529 kB]
+Get:27 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [624 B]
+Get:28 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [967 kB]
+Get:29 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [208 kB]
+Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [21.7 kB]
+Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [39.6 kB]
+Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [8716 B]
+Get:33 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [368 B]
+Fetched 15.9 MB in 2s (7530 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+7 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+Command: sudo apt list --upgradable
+Listing...
+cloud-init/jammy-updates 24.4.1-0ubuntu0~22.04.2 all [upgradable from: 24.4.1-0ubuntu0~22.04.1]
+libdw1/jammy-updates,jammy-security 0.186-1ubuntu0.1 amd64 [upgradable from: 0.186-1build1]
+libelf1/jammy-updates,jammy-security 0.186-1ubuntu0.1 amd64 [upgradable from: 0.186-1build1]
+libxslt1.1/jammy-updates,jammy-security 1.1.34-4ubuntu0.22.04.3 amd64 [upgradable from: 1.1.34-4ubuntu0.22.04.1]
+linux-cloud-tools-common/jammy-updates 5.15.0-135.146 all [upgradable from: 5.15.0-134.145]
+linux-libc-dev/jammy-updates 5.15.0-135.146 amd64 [upgradable from: 5.15.0-134.145]
+linux-tools-common/jammy-updates 5.15.0-135.146 all [upgradable from: 5.15.0-134.145]

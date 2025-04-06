@@ -1,0 +1,77 @@
+Patch Update Information for 10.1.0.7
+========================================
+
+Command: sudo zypper refresh
+Repository 'SLE-Module-Basesystem15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Basesystem15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Pool' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Python3-15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Python3-15-SP5-Updates' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Pool' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Updates' is up to date.
+All repositories have been refreshed.
+
+Command: sudo zypper list-updates
+Refreshing service 'Basesystem_Module_x86_64'.
+Refreshing service 'Desktop_Applications_Module_x86_64'.
+Refreshing service 'Development_Tools_Module_x86_64'.
+Refreshing service 'Python_3_Module_x86_64'.
+Refreshing service 'SUSE_Linux_Enterprise_Server_x86_64'.
+Refreshing service 'Server_Applications_Module_x86_64'.
+Refreshing service 'Web_and_Scripting_Module_x86_64'.
+Loading repository data...
+Reading installed packages...
+S  | Repository                        | Name          | Current Version      | Available Version    | Arch
+---+-----------------------------------+---------------+----------------------+----------------------+-------
+v  | SLE-Module-Python3-15-SP5-Updates | python311-six | 1.16.0-150400.18.6.1 | 1.16.0-150400.18.9.1 | noarch
+
+Command: sudo zypper update -y
+Refreshing service 'Basesystem_Module_x86_64'.
+Refreshing service 'Desktop_Applications_Module_x86_64'.
+Refreshing service 'Development_Tools_Module_x86_64'.
+Refreshing service 'Python_3_Module_x86_64'.
+Refreshing service 'SUSE_Linux_Enterprise_Server_x86_64'.
+Refreshing service 'Server_Applications_Module_x86_64'.
+Refreshing service 'Web_and_Scripting_Module_x86_64'.
+Loading repository data...
+Reading installed packages...
+
+The following 9 items are locked and will not be changed by any action:
+ Available:
+  plymouth plymouth-branding-SLE plymouth-devel plymouth-dracut plymouth-lang plymouth-plugin-label plymouth-plugin-label-ft plymouth-plugin-script plymouth-scripts
+
+The following package is going to be upgraded:
+  python311-six
+
+The following NEW package is going to be installed:
+  hwdata
+
+The following package is going to be REMOVED:
+  pciutils-ids
+
+1 package to upgrade, 1 new, 1 to remove.
+
+Package download size:     1.6 MiB
+
+Package install size change:
+              |       9.4 MiB  required by packages that will be installed
+     8.2 MiB  |  -    1.2 MiB  released by packages that will be removed
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+Retrieving: hwdata-0.390-150000.3.74.2.noarch (SLE-Module-Basesystem15-SP5-Updates) (1/2),   1.6 MiB    
+Retrieving: hwdata-0.390-150000.3.74.2.noarch.rpm [.Retrieving: hwdata-0.390-150000.3.74.2.noarch.rpm [.done]
+Retrieving: python311-six-1.16.0-150400.18.9.1.noarch (SLE-Module-Python3-15-SP5-Updates) (2/2),  40.7 KiB    
+Retrieving: python311-six-1.16.0-150400.18.9.1.noarch.rpm [.Retrieving: python311-six-1.16.0-150400.18.9.1.noarch.rpm [.done]
+
+Checking for file conflicts: [..........done]
+(1/2) Installing: hwdata-0.390-150000.3.74.2.noarch [.......done]
+(2/2) Installing: python311-six-1.16.0-150400.18.9.1.noarch [....done]
+ 

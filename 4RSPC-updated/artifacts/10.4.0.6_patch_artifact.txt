@@ -1,0 +1,46 @@
+Patch Update Information for 10.4.0.6
+========================================
+
+Command: export DEBIAN_FRONTEND=noninteractive
+
+Command: sudo apt update -y
+Hit:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2461 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1198 kB]
+Fetched 4043 kB in 2s (2503 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+26 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+Command: sudo apt list --upgradable
+Listing...
+dirmngr/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gnupg-l10n/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 all [upgradable from: 2.2.27-3ubuntu2.1]
+gnupg-utils/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gnupg/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 all [upgradable from: 2.2.27-3ubuntu2.1]
+gpg-agent/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpg-wks-client/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpg-wks-server/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpg/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpgconf/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpgsm/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+gpgv/jammy-updates,jammy-security 2.2.27-3ubuntu2.3 amd64 [upgradable from: 2.2.27-3ubuntu2.1]
+libnss-systemd/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+libpam-systemd/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+libsystemd0/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+libudev1/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+linux-azure/jammy-updates,jammy-security 6.8.0-1025.30~22.04.1 amd64 [upgradable from: 6.8.0-1021.25~22.04.1]
+linux-cloud-tools-azure/jammy-updates,jammy-security 6.8.0-1025.30~22.04.1 amd64 [upgradable from: 6.8.0-1021.25~22.04.1]
+linux-cloud-tools-common/jammy-updates,jammy-security 5.15.0-136.147 all [upgradable from: 5.15.0-135.146]
+linux-headers-azure/jammy-updates,jammy-security 6.8.0-1025.30~22.04.1 amd64 [upgradable from: 6.8.0-1021.25~22.04.1]
+linux-image-azure/jammy-updates,jammy-security 6.8.0-1025.30~22.04.1 amd64 [upgradable from: 6.8.0-1021.25~22.04.1]
+linux-tools-azure/jammy-updates,jammy-security 6.8.0-1025.30~22.04.1 amd64 [upgradable from: 6.8.0-1021.25~22.04.1]
+linux-tools-common/jammy-updates,jammy-security 5.15.0-136.147 all [upgradable from: 5.15.0-135.146]
+systemd-sysv/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+systemd/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]
+tzdata/jammy-updates,jammy-security 2025b-0ubuntu0.22.04 all [upgradable from: 2024b-0ubuntu0.22.04.1]
+udev/jammy-updates 249.11-0ubuntu3.15 amd64 [upgradable from: 249.11-0ubuntu3.12]

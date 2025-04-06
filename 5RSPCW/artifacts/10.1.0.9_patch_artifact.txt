@@ -1,0 +1,37 @@
+Patch Update Information for 10.1.0.9
+========================================
+
+Command: sudo zypper refresh
+Repository 'SLE-Module-Basesystem15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Basesystem15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Containers15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Containers15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Desktop-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Pool' is up to date.
+Repository 'SLE-Module-DevTools15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Public-Cloud15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Public-Cloud15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Python3-15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Python3-15-SP5-Updates' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Pool' is up to date.
+Repository 'SLE-Product-SLES15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Server-Applications15-SP5-Updates' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Pool' is up to date.
+Repository 'SLE-Module-Web-Scripting15-SP5-Updates' is up to date.
+All repositories have been refreshed.
+
+Command: sudo zypper list-updates
+Refreshing service 'Basesystem_Module_x86_64'.
+Refreshing service 'Containers_Module_x86_64'.
+Refreshing service 'Desktop_Applications_Module_x86_64'.
+Refreshing service 'Development_Tools_Module_x86_64'.
+Refreshing service 'Public_Cloud_Module_x86_64'.
+Refreshing service 'Python_3_Module_x86_64'.
+Refreshing service 'SUSE_Linux_Enterprise_Server_x86_64'.
+Refreshing service 'Server_Applications_Module_x86_64'.
+Refreshing service 'Web_and_Scripting_Module_x86_64'.
+Loading repository data...
+Reading installed packages...
+No updates found.

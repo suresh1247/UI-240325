@@ -1,0 +1,40 @@
+System Information for 10.4.0.8
+========================================
+
+Command: cat /etc/os-release
+NAME="CentOS Linux"
+VERSION="8"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Linux 8"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+CENTOS_MANTISBT_PROJECT="CentOS-8"
+CENTOS_MANTISBT_PROJECT_VERSION="8"
+
+Command: date
+Sun Apr  6 03:32:47 UTC 2025
+
+Command: uptime -p
+up 4 minutes
+
+Command: free -h
+total        used        free      shared  buff/cache   available
+Mem:          904Mi       191Mi       359Mi       6.0Mi       354Mi       569Mi
+Swap:            0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        437M     0  437M   0% /dev
+tmpfs           453M     0  453M   0% /dev/shm
+tmpfs           453M  6.3M  447M   2% /run
+tmpfs           453M     0  453M   0% /sys/fs/cgroup
+/dev/sdb2        30G  2.2G   27G   8% /
+/dev/sdb1       496M  110M  387M  23% /boot
+/dev/sdb15      495M  7.3M  488M   2% /boot/efi
+/dev/sda1       3.9G   16M  3.7G   1% /mnt/resource
+tmpfs            91M     0   91M   0% /run/user/1000

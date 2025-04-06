@@ -1,0 +1,30 @@
+Patch Update Information for 10.4.0.8
+========================================
+
+Command: sudo yum clean all
+23 files removed
+
+Command: sudo yum makecache
+CentOS-8 - AppStream (OpenLogic)                 11 MB/s | 8.4 MB     00:00    
+CentOS-8 - Base (OpenLogic)                     4.4 MB/s | 4.6 MB     00:01    
+CentOS-8 - Extras (OpenLogic)                    28 kB/s |  10 kB     00:00    
+CentOS Linux 8 - AppStream                      0.0  B/s |   0  B     00:01    
+CentOS Linux 8 - BaseOS                         0.0  B/s |   0  B     00:00    
+CentOS Linux 8 - Extras                         0.0  B/s |   0  B     00:00    
+CentOS-8 - OpenLogic packages for x86_64        316 kB/s |  16 kB     00:00    
+Metadata cache created.
+
+Command: sudo yum check-update
+CentOS Linux 8 - AppStream                      0.0  B/s |   0  B     00:00    
+CentOS Linux 8 - BaseOS                         0.0  B/s |   0  B     00:00    
+CentOS Linux 8 - Extras                         0.0  B/s |   0  B     00:00    
+Last metadata expiration check: 0:00:04 ago on Sun 06 Apr 2025 03:41:59 AM UTC.
+
+Command: sudo yum update -y
+CentOS Linux 8 - AppStream                      0.0  B/s |   0  B     00:00    
+CentOS Linux 8 - BaseOS                         0.0  B/s |   0  B     00:00    
+CentOS Linux 8 - Extras                         0.0  B/s |   0  B     00:00    
+Last metadata expiration check: 0:00:05 ago on Sun 06 Apr 2025 03:41:59 AM UTC.
+Dependencies resolved.
+Nothing to do.
+Complete!

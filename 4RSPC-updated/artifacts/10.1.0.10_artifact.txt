@@ -1,0 +1,63 @@
+System Information for 10.1.0.10
+========================================
+
+Command: cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+Command: date
+Tue Mar 25 09:55:42 UTC 2025
+
+Command: ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 60:45:bd:a7:01:25 brd ff:ff:ff:ff:ff:ff
+    inet 10.1.0.10/24 metric 100 brd 10.1.0.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::6245:bdff:fea7:125/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enP59013s1: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master eth0 state UP group default qlen 1000
+    link/ether 60:45:bd:a7:01:25 brd ff:ff:ff:ff:ff:ff
+    altname enP59013p0s2
+    inet6 fe80::6245:bdff:fea7:125/64 scope link 
+       valid_lft forever preferred_lft forever
+
+Command: free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       481Mi       3.3Gi       4.0Mi       234Mi       3.3Gi
+Swap:             0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G  1.9G   27G   7% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           783M  968K  782M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+efivarfs        128M   26K  128M   1% /sys/firmware/efi/efivars
+/dev/sda16      881M   59M  761M   8% /boot
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs           392M   12K  392M   1% /run/user/1000
+
+Command: uptime
+ 09:55:42 up 26 min,  1 user,  load average: 0.08, 0.02, 0.01
+
+Command: netstat -planetu
+
+Command: uname -r
+6.8.0-1021-azure
