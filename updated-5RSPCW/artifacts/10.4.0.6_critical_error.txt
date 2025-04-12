@@ -1,0 +1,21 @@
+Patch Update Information for 10.4.0.6
+========================================
+Start Time: 2025-04-12T15:09:20.743609
+
+Server Details:
+- IP: 10.4.0.6
+- Hostname: 
+- Username: suresh
+- Tags: 
+
+Connecting with key: /root/.ssh/id_rsa
+
+!!! Critical Error: timed out
+Exception Type: TimeoutError
+Traceback: Traceback (most recent call last):
+  File "/home/suresh/UI-combined/updated-5RSPCW/d.py", line 316, in run_patch_update
+    ssh.connect(
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
