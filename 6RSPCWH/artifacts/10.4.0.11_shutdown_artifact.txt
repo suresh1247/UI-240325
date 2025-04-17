@@ -1,0 +1,42 @@
+System Information for 10.4.0.11
+========================================
+
+Command: cat /etc/os-release
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+Command: date
+Wed Apr 16 12:24:27 UTC 2025
+
+Command: uptime -p
+up 4 minutes
+
+Command: free -h
+total        used        free      shared  buff/cache   available
+Mem:           925M        195M        610M        6.2M        119M        597M
+Swap:            0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        453M     0  453M   0% /dev
+tmpfs           463M     0  463M   0% /dev/shm
+tmpfs           463M  6.2M  457M   2% /run
+tmpfs           463M     0  463M   0% /sys/fs/cgroup
+/dev/sda2        30G  2.3G   27G   8% /
+/dev/sda1       494M   91M  403M  19% /boot
+/dev/sda15      495M   12M  484M   3% /boot/efi
+/dev/sdb1       3.9G   16M  3.7G   1% /mnt/resource
+tmpfs            93M     0   93M   0% /run/user/1000

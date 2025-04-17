@@ -1,0 +1,36 @@
+System Information for 10.4.0.8
+========================================
+
+Command: cat /etc/os-release
+NAME="SLES"
+VERSION="15-SP4"
+VERSION_ID="15.4"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP4"
+ID="sles"
+ID_LIKE="suse"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:15:sp4"
+DOCUMENTATION_URL="https://documentation.suse.com/"
+VARIANT_ID="sles-sapcal"
+
+Command: date
+Wed Apr 16 12:24:27 UTC 2025
+
+Command: uptime -p
+N/A
+
+Command: free -h
+total        used        free      shared  buff/cache   available
+Mem:           885Mi       302Mi       583Mi       8.0Mi       134Mi       582Mi
+Swap:             0B          0B          0B
+
+Command: df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           664M  4.0K  664M   1% /dev/shm
+tmpfs           178M  5.3M  172M   3% /run
+/dev/sda4        29G  4.6G   24G  16% /
+/dev/sda3      1014M  139M  876M  14% /boot
+/dev/sda2       512M  3.0M  509M   1% /boot/efi
+/dev/sdb1       3.9G   24K  3.7G   1% /mnt
+tmpfs            89M     0   89M   0% /run/user/1000

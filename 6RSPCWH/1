@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-body">
+        <h2 class="mb-4">Server Health Report</h2>
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Server IP</th>
+                    <th>CPU Usage</th>
+                    <th>Memory Usage</th>
+                    <th>Up-to-date</th>
+                    <th>Reboot Required</th>
+                    <th>Disk Usage</th>
+                    <th>Load Avg</th>
+                    <th>SELinux</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for server in servers %}
+                <tr>
+                    <td>{{ server.ip }}</td>
+                    {% if not server.reachable %}
+                        <td colspan="7" class="table-danger">Unreachable</td>
+                    {% else %}
+                        <td class="table-{{ 'success' if server.cpu_usage == 'Yes' else 'danger' }}">{{ server.cpu_usage }}</td>
+                        <td class="table-{{ 'success' if server.memory_usage == 'Yes' else 'danger' }}">{{ server.memory_usage }}</td>
+                        <td class="table-{{ 'success' if server.compliance == 'Yes' else 'danger' }}">{{ server.compliance }}</td>
+                        <td class="table-{{ 'success' if server.reboot_required == 'No' else 'danger' }}">{{ server.reboot_required }}</td>
+                        <td class="table-{{ 'success' if server.disk_usage == 'Yes' else 'danger' }}">{{ server.disk_usage }}</td>
+                        <td class="table-{{ 'success' if server.load_average == 'Yes' else 'danger' }}">{{ server.load_average }}</td>
+                        <td class="table-{{ 'success' if server.selinux_status == 'Yes' else 'danger' }}">{{ server.selinux_status }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
