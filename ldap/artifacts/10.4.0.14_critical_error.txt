@@ -1,0 +1,5 @@
+Patch Update Information for 10.4.0.14
+========================================
+Start Time: 2025-04-21T13:15:45.248095
+
+Critical Error: [Errno None] Unable to connect to port 22 on 10.4.0.14
