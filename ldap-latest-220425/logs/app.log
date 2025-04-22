@@ -1,0 +1,293 @@
+2025-04-22 11:02:37,965 - ERROR - [anonymous] [http_error] [http://10.4.0.4:5002/login] - HTTP 401 - POST /login
+2025-04-22 11:03:24,472 - INFO - [likitha] [bulk_delete] [20.5.9.7] - Bulk delete: 1 servers
+2025-04-22 11:03:55,210 - INFO - [likitha] [bulk_delete] [10.5.6.8, 40.5.9.1] - Bulk delete: 2 servers
+2025-04-22 11:04:18,746 - INFO - [likitha] [shutdown] [10.4.0.13] - Executing shutdown on 10.4.0.13
+2025-04-22 11:04:18,992 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: cat /etc/os-release
+Exit code: 0
+STDOUT: NAME="CentOS Linux"\nVERSION="7 (Core)"\nID="centos"\nID_LIKE="rhel fedora"\nVERSION_ID="7"\nPRETTY_NAME="CentOS Linux 7 (Core)"\nANSI_COLOR="0;31"\nCPE_NAME="cpe:/o:centos:centos:7"\nHOME_URL="https://www.centos.org/"\nBUG_REPORT_URL="https://bugs.centos.org/"\n\nCENTOS_MANTISBT_PROJECT="CentOS-7"\nCENTOS_MANTISBT_PROJECT_VERSION="7"\nREDHAT_SUPPORT_PRODUCT="centos"\nREDHAT_SUPPORT_PRODUCT_VERSION="7"
+STDERR: None
+2025-04-22 11:04:19,061 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: date
+Exit code: 0
+STDOUT: Tue Apr 22 11:04:19 UTC 2025
+STDERR: None
+2025-04-22 11:04:19,131 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: uptime -p
+Exit code: 0
+STDOUT: up 3 hours, 8 minutes
+STDERR: None
+2025-04-22 11:04:19,202 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: free -h
+Exit code: 0
+STDOUT: total        used        free      shared  buff/cache   available\nMem:           925M        196M        120M        6.2M        608M        583M\nSwap:            0B          0B          0B
+STDERR: None
+2025-04-22 11:04:19,272 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: df -h
+Exit code: 0
+STDOUT: Filesystem      Size  Used Avail Use% Mounted on\ndevtmpfs        453M     0  453M   0% /dev\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           463M  6.2M  457M   2% /run\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\n/dev/sda2        30G  2.4G   27G   8% /\n/dev/sda1       494M   92M  403M  19% /boot\n/dev/sda15      495M   12M  484M   3% /boot/efi\n/dev/sdb1       3.9G   16M  3.7G   1% /mnt/resource\ntmpfs            93M     0   93M   0% /run/user/1152801110
+STDERR: None
+2025-04-22 11:04:19,433 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: sudo shutdown -h now
+Exit code: -1
+STDOUT: None
+STDERR: None
+2025-04-22 11:04:33,194 - ERROR - [likitha] [shutdown] [10.2.4.6] - Command failed: shutdown on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:07:09,565 - INFO - [likitha] [reboot] [10.4.0.13] - Executing reboot on 10.4.0.13
+2025-04-22 11:07:09,813 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: cat /etc/os-release
+Exit code: 0
+STDOUT: NAME="CentOS Linux"\nVERSION="7 (Core)"\nID="centos"\nID_LIKE="rhel fedora"\nVERSION_ID="7"\nPRETTY_NAME="CentOS Linux 7 (Core)"\nANSI_COLOR="0;31"\nCPE_NAME="cpe:/o:centos:centos:7"\nHOME_URL="https://www.centos.org/"\nBUG_REPORT_URL="https://bugs.centos.org/"\n\nCENTOS_MANTISBT_PROJECT="CentOS-7"\nCENTOS_MANTISBT_PROJECT_VERSION="7"\nREDHAT_SUPPORT_PRODUCT="centos"\nREDHAT_SUPPORT_PRODUCT_VERSION="7"
+STDERR: None
+2025-04-22 11:07:09,877 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: date
+Exit code: 0
+STDOUT: Tue Apr 22 11:07:09 UTC 2025
+STDERR: None
+2025-04-22 11:07:09,945 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: uptime -p
+Exit code: 0
+STDOUT: up 1 minute
+STDERR: None
+2025-04-22 11:07:10,010 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: free -h
+Exit code: 0
+STDOUT: total        used        free      shared  buff/cache   available\nMem:           925M        203M        553M        6.2M        168M        580M\nSwap:            0B          0B          0B
+STDERR: None
+2025-04-22 11:07:10,080 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: df -h
+Exit code: 0
+STDOUT: Filesystem      Size  Used Avail Use% Mounted on\ndevtmpfs        453M     0  453M   0% /dev\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           463M  6.2M  457M   2% /run\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\n/dev/sda2        30G  2.4G   27G   8% /\n/dev/sda1       494M   92M  403M  19% /boot\n/dev/sda15      495M   12M  484M   3% /boot/efi\n/dev/sdb1       3.9G   16M  3.7G   1% /mnt/resource\ntmpfs            93M     0   93M   0% /run/user/1152801110
+STDERR: None
+2025-04-22 11:07:10,158 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: systemctl list-units --type=service --state=running --no-legend | awk '{print $1}'
+Exit code: 0
+STDOUT: atd.service\nauditd.service\nchronyd.service\ncrond.service\ndbus.service\ngetty@tty1.service\nhypervkvpd.service\nlibstoragemgmt.service\nlvm2-lvmetad.service\nNetworkManager.service\noddjobd.service\npolkit.service\npostfix.service\nrngd.service\nrpcbind.service\nrsyslog.service\nserial-getty@ttyS0.service\nsmartd.service\nsshd.service\nsssd.service\nsystemd-journald.service\nsystemd-logind.service\nsystemd-udevd.service\ntuned.service\nwaagent.service
+STDERR: None
+2025-04-22 11:07:10,333 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: sudo shutdown -r now
+Exit code: -1
+STDOUT: None
+STDERR: None
+2025-04-22 11:07:24,022 - ERROR - [likitha] [reboot] [10.2.4.6] - Command failed: reboot on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:10:11,165 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: uptime -p || uptime
+Exit code: 0
+STDOUT: up 2 minutes
+STDERR: None
+2025-04-22 11:10:11,243 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: systemctl list-units --type=service --state=running --no-legend | awk '{print $1}'
+Exit code: 0
+STDOUT: atd.service\nauditd.service\nchronyd.service\ncrond.service\ndbus.service\ngetty@tty1.service\nhypervkvpd.service\nlibstoragemgmt.service\nlvm2-lvmetad.service\nNetworkManager.service\noddjobd.service\npolkit.service\npostfix.service\nrngd.service\nrpcbind.service\nrsyslog.service\nserial-getty@ttyS0.service\nsmartd.service\nsshd.service\nsssd.service\nsystemd-journald.service\nsystemd-logind.service\nsystemd-udevd.service\ntuned.service\nwaagent.service
+STDERR: None
+2025-04-22 11:11:09,519 - INFO - [likitha] [patch_update] [10.4.0.13] - Patch check on 10.4.0.13
+2025-04-22 11:11:23,841 - ERROR - [likitha] [patch_update] [10.2.4.6] - Patch operation failed on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 795, in run_patch_update
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:11:25,827 - INFO - [likitha] [patch_update] [10.4.0.13] - Command executed: sudo yum clean all && sudo yum makecache
+Exit code: 0
+STDOUT: Loaded plugins: langpacks\nCleaning repos: base-openlogic extras-openlogic updates-openlogic base extras\n              : openlogic updates\nLoaded plugins: langpacks\nMetadata Cache Created
+STDERR: Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+2025-04-22 11:11:28,589 - INFO - [likitha] [patch_update] [10.4.0.13] - Command executed: sudo yum check-update
+Exit code: 0
+STDOUT: Loaded plugins: langpacks
+STDERR: Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+2025-04-22 11:12:29,575 - INFO - [likitha] [patch_update] [10.4.0.13] - Patch apply on 10.4.0.13
+2025-04-22 11:12:43,867 - ERROR - [likitha] [patch_update] [10.2.4.6] - Patch operation failed on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 795, in run_patch_update
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:12:45,322 - INFO - [likitha] [patch_update] [10.4.0.13] - Command executed: sudo yum clean all && sudo yum makecache
+Exit code: 0
+STDOUT: Loaded plugins: langpacks\nCleaning repos: base-openlogic extras-openlogic updates-openlogic base extras\n              : openlogic updates\nLoaded plugins: langpacks\nMetadata Cache Created
+STDERR: Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+2025-04-22 11:12:47,558 - INFO - [likitha] [patch_update] [10.4.0.13] - Command executed: sudo yum check-update
+Exit code: 0
+STDOUT: Loaded plugins: langpacks
+STDERR: Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+2025-04-22 11:12:48,589 - INFO - [likitha] [patch_and_reboot] [10.4.0.13] - Command executed: needs-restarting -r &> /dev/null; echo $?
+Exit code: 0
+STDOUT: 0
+STDERR: None
+2025-04-22 11:13:57,711 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: top -bn1 | grep 'Cpu(s)' | awk '{print $2+$4}'
+Exit code: 0
+STDOUT: 12.5
+STDERR: None
+2025-04-22 11:13:57,783 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: free | awk '/Mem:/ {printf("%.2f", $3/$2 * 100.0)}'
+Exit code: 0
+STDOUT: 21.79
+STDERR: None
+2025-04-22 11:13:57,851 - INFO - [likitha] [compliance_check] [10.4.0.13] - Compliance check OS detection: centos
+2025-04-22 11:13:58,776 - INFO - [likitha] [compliance_check] [10.4.0.13] - Command executed: sudo yum check-update
+Exit code: 0
+STDOUT: Loaded plugins: langpacks
+STDERR: Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"\nCould not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was\n14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+2025-04-22 11:13:58,841 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: [ -f /var/run/reboot-required ] && echo Yes || echo No
+Exit code: 0
+STDOUT: No
+STDERR: None
+2025-04-22 11:13:58,911 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: df -h | awk '$5 > 80 {print $1}'
+Exit code: 0
+STDOUT: Filesystem
+STDERR: None
+2025-04-22 11:13:58,978 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: df -i | awk '$5 > 80 {print $1}'
+Exit code: 0
+STDOUT: Filesystem
+STDERR: None
+2025-04-22 11:13:59,045 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: cat /proc/loadavg | awk '{print $1, $2, $3}'
+Exit code: 0
+STDOUT: 0.10 0.41 0.29
+STDERR: None
+2025-04-22 11:13:59,123 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: sudo ufw status | grep 'Status: active'
+Exit code: 1
+STDOUT: None
+STDERR: sudo: ufw: command not found
+2025-04-22 11:13:59,216 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: sudo sshd -t
+Exit code: 0
+STDOUT: None
+STDERR: None
+2025-04-22 11:13:59,282 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: uptime -p || uptime
+Exit code: 0
+STDOUT: up 6 minutes
+STDERR: None
+2025-04-22 11:13:59,348 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: uname -r
+Exit code: 0
+STDOUT: 3.10.0-1160.119.1.el7.x86_64
+STDERR: None
+2025-04-22 11:13:59,497 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: timedatectl | grep 'System clock synchronized'
+Exit code: 1
+STDOUT: None
+STDERR: None
+2025-04-22 11:13:59,596 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: sudo diff <(cat /etc/fstab | grep -v '^#') <(df -h | awk '{print $1}')
+Exit code: 2
+STDOUT: None
+STDERR: diff: /dev/fd/63: No such file or directory\ndiff: /dev/fd/62: No such file or directory
+2025-04-22 11:13:59,661 - INFO - [likitha] [health_check] [10.4.0.13] - Command executed: getenforce
+Exit code: 127
+STDOUT: None
+STDERR: bash: getenforce: command not found
+2025-04-22 11:14:11,821 - INFO - [likitha] [health_check] [10.2.4.6, 10.4.0.13] - Action COMPLETED - health_check on 2 servers
+2025-04-22 11:17:50,880 - INFO - [likitha] [reboot] [10.4.0.13] - Executing reboot on 10.4.0.13
+2025-04-22 11:17:51,103 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: cat /etc/os-release
+Exit code: 0
+STDOUT: NAME="CentOS Linux"\nVERSION="7 (Core)"\nID="centos"\nID_LIKE="rhel fedora"\nVERSION_ID="7"\nPRETTY_NAME="CentOS Linux 7 (Core)"\nANSI_COLOR="0;31"\nCPE_NAME="cpe:/o:centos:centos:7"\nHOME_URL="https://www.centos.org/"\nBUG_REPORT_URL="https://bugs.centos.org/"\n\nCENTOS_MANTISBT_PROJECT="CentOS-7"\nCENTOS_MANTISBT_PROJECT_VERSION="7"\nREDHAT_SUPPORT_PRODUCT="centos"\nREDHAT_SUPPORT_PRODUCT_VERSION="7"
+STDERR: None
+2025-04-22 11:17:51,172 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: date
+Exit code: 0
+STDOUT: Tue Apr 22 11:17:51 UTC 2025
+STDERR: None
+2025-04-22 11:17:51,246 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: uptime -p
+Exit code: 0
+STDOUT: up 10 minutes
+STDERR: None
+2025-04-22 11:17:51,315 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: free -h
+Exit code: 0
+STDOUT: total        used        free      shared  buff/cache   available\nMem:           925M        201M        139M        6.2M        585M        577M\nSwap:            0B          0B          0B
+STDERR: None
+2025-04-22 11:17:51,382 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: df -h
+Exit code: 0
+STDOUT: Filesystem      Size  Used Avail Use% Mounted on\ndevtmpfs        453M     0  453M   0% /dev\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           463M  6.2M  457M   2% /run\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\n/dev/sda2        30G  2.4G   27G   8% /\n/dev/sda1       494M   92M  403M  19% /boot\n/dev/sda15      495M   12M  484M   3% /boot/efi\n/dev/sdb1       3.9G   16M  3.7G   1% /mnt/resource\ntmpfs            93M     0   93M   0% /run/user/1152801110
+STDERR: None
+2025-04-22 11:17:51,458 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: systemctl list-units --type=service --state=running --no-legend | awk '{print $1}'
+Exit code: 0
+STDOUT: atd.service\nauditd.service\nchronyd.service\ncrond.service\ndbus.service\ngetty@tty1.service\nhypervkvpd.service\nlibstoragemgmt.service\nlvm2-lvmetad.service\nNetworkManager.service\noddjobd.service\npolkit.service\npostfix.service\nrngd.service\nrpcbind.service\nrsyslog.service\nserial-getty@ttyS0.service\nsmartd.service\nsshd.service\nsssd.service\nsystemd-journald.service\nsystemd-logind.service\nsystemd-udevd.service\ntuned.service\nwaagent.service
+STDERR: None
+2025-04-22 11:17:51,657 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: sudo shutdown -r now
+Exit code: -1
+STDOUT: None
+STDERR: None
+2025-04-22 11:18:05,416 - ERROR - [likitha] [reboot] [10.2.4.6] - Command failed: reboot on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:20:52,521 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: uptime -p || uptime
+Exit code: 0
+STDOUT: up 2 minutes
+STDERR: None
+2025-04-22 11:20:52,601 - INFO - [likitha] [reboot] [10.4.0.13] - Command executed: systemctl list-units --type=service --state=running --no-legend | awk '{print $1}'
+Exit code: 0
+STDOUT: atd.service\nauditd.service\nchronyd.service\ncrond.service\ndbus.service\ngetty@tty1.service\nhypervkvpd.service\nlibstoragemgmt.service\nlvm2-lvmetad.service\nNetworkManager.service\noddjobd.service\npolkit.service\npostfix.service\nrngd.service\nrpcbind.service\nrsyslog.service\nserial-getty@ttyS0.service\nsmartd.service\nsshd.service\nsssd.service\nsystemd-journald.service\nsystemd-logind.service\nsystemd-udevd.service\ntuned.service\nwaagent.service
+STDERR: None
+2025-04-22 11:35:25,797 - INFO - [likitha] [shutdown] [10.4.0.13] - Executing shutdown on 10.4.0.13
+2025-04-22 11:35:26,016 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: cat /etc/os-release
+Exit code: 0
+STDOUT: NAME="CentOS Linux"\nVERSION="7 (Core)"\nID="centos"\nID_LIKE="rhel fedora"\nVERSION_ID="7"\nPRETTY_NAME="CentOS Linux 7 (Core)"\nANSI_COLOR="0;31"\nCPE_NAME="cpe:/o:centos:centos:7"\nHOME_URL="https://www.centos.org/"\nBUG_REPORT_URL="https://bugs.centos.org/"\n\nCENTOS_MANTISBT_PROJECT="CentOS-7"\nCENTOS_MANTISBT_PROJECT_VERSION="7"\nREDHAT_SUPPORT_PRODUCT="centos"\nREDHAT_SUPPORT_PRODUCT_VERSION="7"
+STDERR: None
+2025-04-22 11:35:26,081 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: date
+Exit code: 0
+STDOUT: Tue Apr 22 11:35:26 UTC 2025
+STDERR: None
+2025-04-22 11:35:26,147 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: uptime -p
+Exit code: 0
+STDOUT: up 17 minutes
+STDERR: None
+2025-04-22 11:35:26,214 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: free -h
+Exit code: 0
+STDOUT: total        used        free      shared  buff/cache   available\nMem:           925M        201M        555M        6.2M        169M        583M\nSwap:            0B          0B          0B
+STDERR: None
+2025-04-22 11:35:26,282 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: df -h
+Exit code: 0
+STDOUT: Filesystem      Size  Used Avail Use% Mounted on\ndevtmpfs        453M     0  453M   0% /dev\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           463M  6.2M  457M   2% /run\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\n/dev/sda2        30G  2.4G   27G   8% /\n/dev/sda1       494M   92M  403M  19% /boot\n/dev/sda15      495M   12M  484M   3% /boot/efi\n/dev/sdb1       3.9G   16M  3.7G   1% /mnt/resource\ntmpfs            93M     0   93M   0% /run/user/1152801110
+STDERR: None
+2025-04-22 11:35:26,459 - INFO - [likitha] [shutdown] [10.4.0.13] - Command executed: sudo shutdown -h now
+Exit code: -1
+STDOUT: None
+STDERR: None
+2025-04-22 11:35:40,258 - ERROR - [likitha] [shutdown] [10.2.4.6] - Command failed: shutdown on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:47:27,052 - ERROR - [likitha] [reboot] [10.2.4.6] - Command failed: reboot on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:47:27,053 - ERROR - [likitha] [reboot] [10.4.0.13] - Command failed: reboot on 10.4.0.13 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:57:44,456 - ERROR - [likitha] [shutdown] [10.4.0.13] - Command failed: shutdown on 10.4.0.13 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 11:57:44,456 - ERROR - [likitha] [shutdown] [10.2.4.6] - Command failed: shutdown on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 12:07:17,730 - ERROR - [likitha] [shutdown] [10.2.4.6] - Command failed: shutdown on 10.2.4.6 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 12:07:17,730 - ERROR - [likitha] [shutdown] [10.4.0.13] - Command failed: shutdown on 10.4.0.13 - timed out
+Traceback (most recent call last):
+  File "/home/suresh/UI-combined/ldap/j.py", line 482, in run_command
+    ssh.connect(ip, username=username, password=password, timeout=15)
+  File "/usr/local/lib/python3.10/dist-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+2025-04-22 12:07:53,136 - ERROR - [anonymous] [http_error] [http://10.4.0.4:5002/login] - HTTP 401 - POST /login
+2025-04-22 12:12:38,379 - ERROR - [anonymous] [http_error] [http://10.4.0.4:5002/login] - HTTP 401 - POST /login
